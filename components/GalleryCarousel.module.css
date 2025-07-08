@@ -1,0 +1,143 @@
+.carouselContainerWrapper {
+  width: 100%;
+  max-width: 100vw; /* ⬅️ impede estouro da tela */
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.carouselContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 1800px;
+  width: 95%;
+  overflow: hidden;
+}
+
+.visibleImagesContainer {
+  display: flex;
+  gap: 2rem;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  margin-left: 2rem; /* ⬅️ isso sim empurra a primeira imagem sem causar scroll */
+}
+
+
+.imageBox {
+  background-color: white;
+  padding: 0.5rem;
+  flex-shrink: 0;
+  width: 400px;
+  scroll-snap-align: start;
+  cursor: pointer;
+}
+
+
+.imageBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrowLeft,
+.arrowRight {
+  background: transparent;
+  border: none;
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.arrowLeft:hover,
+.arrowRight:hover {
+  color: #ccc;
+}
+
+.arrowLeft {
+  margin-right: 1rem;
+  left: 0.5rem;
+
+}
+
+.arrowRight {
+  margin-left: 1rem;
+  right: 0.5rem;
+
+}
+
+/* FULLSCREEN */
+
+.fullscreenOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullscreenImage {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.arrowLeftFullscreen,
+.arrowRightFullscreen {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.arrowLeftFullscreen:hover,
+.arrowRightFullscreen:hover {
+  color: #ccc;
+}
+
+.arrowLeftFullscreen {
+  left: 30px;
+}
+
+.arrowRightFullscreen {
+  right: 30px;
+}

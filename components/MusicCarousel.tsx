@@ -1,0 +1,125 @@
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import { useState } from "react";
+import styles from "./MusicCarousel.module.css";
+
+type Track = {
+  title: string;
+  year: string;
+  url: string;
+};
+
+const music: Track[] = [
+  { title: "Trânsito", year: "2023", url: "https://www.youtube.com/embed/-3uTvAE1umo" },
+  { title: "Pop Filosofia", year: "2021", url: "https://www.youtube.com/embed/llHQkrJmeYw" },
+  { title: "Sol", year: "2020", url: "https://www.youtube.com/embed/Y_uojyGgB_I" },
+  { title: "Vento", year: "2020", url: "https://www.youtube.com/embed/WeOA_NW5rAk" },
+  { title: "Coisa estranha", year: "2020", url: "https://www.youtube.com/embed/r2ezXdKhJDg" },
+  { title: "Na Beira do Mundo", year: "2019", url: "https://www.youtube.com/embed/nZVHjqrPJ4g" },
+  { title: "Trovão", year: "2019", url: "https://www.youtube.com/embed/qf3UuX3Chfg" },
+  { title: "Bailarina", year: "2018", url: "https://www.youtube.com/embed/2NXQK2Pt2Pg" },
+  { title: "Tu me Bugas", year: "2018", url: "https://www.youtube.com/embed/NDB4n5VVvzU" },
+  { title: "Da Sacada", year: "2018", url: "https://www.youtube.com/embed/UE2YtHhXxJ8" },
+  { title: "O jogo (part. Gio Oliveira)", year: "2016", url: "https://www.youtube.com/embed/pY_Ej92DiBY" },
+  { title: "Epílogo", year: "2016", url: "https://www.youtube.com/embed/cSSXomuWbsI" },
+  { title: "Falso Natural (part. Filipe Hudson)", year: "2016", url: "https://www.youtube.com/embed/6NTCBDlHSjI" },
+  { title: "Quando ela vem", year: "2016", url: "https://www.youtube.com/embed/aIZb_qoDtR4" },
+  { title: "Vogar", year: "2014", url: "https://www.youtube.com/embed/dewEo_aRrLc" },
+];
+
+export default function MusicCarousel() {
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
+    loop: true,
+    mode: "snap",
+    slides: {
+      perView: 1,
+      spacing: 24,
+    },
+    breakpoints: {
+      "(min-width: 600px)": {
+        slides: { perView: 2, spacing: 24 },
+      },
+      "(min-width: 1024px)": {
+        slides: { perView: 3, spacing: 32 },
+      },
+    },
+  });
+
+  const [isLeftHovered, setIsLeftHovered] = useState(false);
+  const [isRightHovered, setIsRightHovered] = useState(false);
+
+  return (
+    <div style={{ position: "relative", minHeight: "80vh", display: "flex", alignItems: "center" }}>
+      <button
+        onClick={() => instanceRef.current?.prev()}
+        aria-label="Voltar"
+        onMouseEnter={() => setIsLeftHovered(true)}
+        onMouseLeave={() => setIsLeftHovered(false)}
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "-40px",
+          transform: "translateY(-50%)",
+          zIndex: 2,
+          background: "none",
+          border: "none",
+          cursor: "pointer",
+        }}
+      >
+        <ArrowLeft size={40} color={isLeftHovered ? "#ccc" : "#fff"} />
+      </button>
+
+      <button
+        onClick={() => instanceRef.current?.next()}
+        aria-label="Avançar"
+        onMouseEnter={() => setIsRightHovered(true)}
+        onMouseLeave={() => setIsRightHovered(false)}
+        style={{
+          position: "absolute",
+          top: "50%",
+          right: "-40px",
+          transform: "translateY(-50%)",
+          zIndex: 2,
+          background: "none",
+          border: "none",
+          cursor: "pointer",
+        }}
+      >
+        <ArrowRight size={40} color={isRightHovered ? "#ccc" : "#fff"} />
+      </button>
+
+      <div ref={sliderRef} className="keen-slider">
+        {music.map((track, index) => (
+          <div key={index} className="keen-slider__slide">
+            <div
+              style={{
+                backgroundColor: "white",
+                padding: "1.5rem",
+                boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.75rem",
+                height: "100%",
+              }}
+            >
+              <div style={{ display: "flex", justifyContent: "space-between", fontWeight: "bold", fontSize: "1.2rem" }}>
+                <span>{track.title}</span>
+                <span>{track.year}</span>
+              </div>
+              <iframe
+                width="100%"
+                height="250"
+                src={track.url}
+                title={`YouTube player - ${track.title}`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
