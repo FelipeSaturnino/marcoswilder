@@ -62,7 +62,7 @@ export default function Contact() {
       <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
         <input type="text" name="nome" placeholder="Nome" value={formData.nome} onChange={handleChange} required />
         <input type="text" name="contato" placeholder="E-mail ou telefone" value={formData.contato} onChange={handleChange} required />
-        <textarea name="mensagem" placeholder="Mensagem" rows={5} value={formData.mensagem} onChange={handleChange} required />
+        <textarea style={{resize: "none"}} name="mensagem" placeholder="Mensagem" rows={5} value={formData.mensagem} onChange={handleChange} required />
         <button type="submit" style={{ padding: "0.6rem", fontWeight: "bold" }}>Enviar</button>
       </form>
 

@@ -8,7 +8,7 @@ type Show = {
 };
 
 const shows: Show[] = [
-  /*{
+  {
     date: "20/07/2025",
     city: "São Paulo - SP",
     venue: "Auditório Ibirapuera",
@@ -20,7 +20,7 @@ const shows: Show[] = [
     venue: "Palácio das Artes",
     ticketLink: "https://example.com/ingresso2",
   },
-  // Para simular ausência de eventos, deixe o array vazio []*/
+  // Para simular ausência de eventos, deixe o array vazio []
 ];
 
 const Schedule = () => {

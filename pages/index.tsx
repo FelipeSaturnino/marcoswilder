@@ -7,6 +7,7 @@ import MusicCarousel from "@/components/MusicCarousel";
 import MoreMusicCarousel from "@/components/MoreMusicCarousel";
 import GalleryCarousel from '@/components/GalleryCarousel';
 import Schedule from "@/components/Schedule";
+import Bio from "@/components/Bio";
 import Contact from "@/components/Contact";
 import {
   inputStyle,
@@ -47,11 +48,7 @@ Fotos: (
 
 
     Bio: (
-      <div style={{ maxWidth: "700px", margin: "0 auto", textAlign: "left", fontSize: "1.2rem", lineHeight: "1.8" }}>
-        <p>
-          Marcos Wilder é cantor, compositor, arranjador, instrumentista, sonoplasta e produtor musical natural de São Paulo. Quando criança teve contato com música através do contrabaixo e violão, mas só a partir de 2014 com o projeto autoral que leva seu nome, começa a publicar suas músicas nas redes sociais, se apresentar em bares, saraus, nas ruas e espaços culturais. Além dos singles, lança dois EPs, sendo eles “Molhado” (2020) e “Prolixo” (2022), faz participação vocal na faixa “João” do Álbum “Seg/Sex” (2022) da banda Jorgens e no mesmo ano produz o álbum “Especialista numa nota só” de Luiza Akimoto. É integrante da banda Helleno e os Universais e da banda Baêa que acompanha artistas como Adriano Nascimento, Zoioo Mc, Tay Oluá e Luiza Akimoto.
-        </p>
-      </div>
+    <Bio />
     ),
 
     Contato: <Contact />,
