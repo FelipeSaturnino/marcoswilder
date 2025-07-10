@@ -9,16 +9,10 @@ type Show = {
 
 const shows: Show[] = [
   {
-    date: "20/07/2025",
+    date: "08/08/2025",
     city: "São Paulo - SP",
-    venue: "Auditório Ibirapuera",
-    ticketLink: "https://example.com/ingresso1",
-  },
-  {
-    date: "05/08/2025",
-    city: "Belo Horizonte - MG",
-    venue: "Palácio das Artes",
-    ticketLink: "https://example.com/ingresso2",
+    venue: "Estúdio Depois do Fim do Mundo",
+    ticketLink: "https://www.instagram.com/depoisdofimdomundoestudio/",
   },
   // Para simular ausência de eventos, deixe o array vazio []
 ];
@@ -56,7 +50,7 @@ const Schedule = () => {
                       fontWeight: "bold",
                     }}
                   >
-                    Ingresso
+                    Informações
                   </a>
                 </td>
               </tr>

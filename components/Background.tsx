@@ -2,7 +2,7 @@ export default function Background() {
   return (
     <div
       style={{
-        backgroundImage: "url('/background.jpg')",
+        backgroundImage: "url('/foto11.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
