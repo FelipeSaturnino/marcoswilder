@@ -4,19 +4,18 @@ import { FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
 import ModalPortal from "./ModalPortal";
 
 const images = [
-  "/foto1.jpg",
-  "/foto2.jpg",
-  "/foto3.jpg",
-  "/foto4.jpg",
-  "/foto5.jpg",
-  "/foto6.jpg",
-  "/foto7.jpg",
-  "/foto8.jpg",
-  "/foto9.jpg",
-  "/foto10.jpg",
-  "/foto11.jpg",
-  "/foto12.jpg",
-  "/foto13.jpg",
+  "/photo1.jpg",
+  "/photo2.jpg",
+  "/photo3.jpg",
+  "/photo4.jpg",
+  "/photo5.jpg",
+  "/photo6.jpg",
+  "/photo7.jpg",
+  "/photo8.jpg",
+  "/photo9.jpg",
+  "/photo10.jpg",
+  "/photo11.jpg",
+  "/photo12.jpg",
 ];
 
 export default function GalleryCarousel() {
