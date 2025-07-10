@@ -93,9 +93,10 @@ Fotos: (
     fontWeight: "bold",
     margin: 0,
     whiteSpace: "nowrap",
+    fontFamily: "'Brown Sugar', cursive",
   }}
 >
-  Marcos Wilder
+  MARCOS WILDER
 </h1>
 
 </motion.div>

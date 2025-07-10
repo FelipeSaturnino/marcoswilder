@@ -42,7 +42,7 @@ export default function Contact() {
 
   return (
     <div style={{ maxWidth: "600px", margin: "0 auto", textAlign: "left" }}>
-      <h2>Fale com Marcos Wilder</h2>
+      <h2 style={{ fontFamily: "'Brown Sugar', cursive" }}>Fale com Marcos Wilder</h2>
 
       {successMessage && (
         <div

@@ -11,7 +11,7 @@ const shows: Show[] = [
   {
     date: "08/08/2025",
     city: "São Paulo - SP",
-    venue: "Estúdio Depois do Fim do Mundo",
+    venue: "Depois do Fim do Mundo Estúdio",
     ticketLink: "https://www.instagram.com/depoisdofimdomundoestudio/",
   },
   // Para simular ausência de eventos, deixe o array vazio []
