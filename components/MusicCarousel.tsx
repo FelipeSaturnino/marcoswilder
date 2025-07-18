@@ -20,12 +20,6 @@ const music: Track[] = [
   { title: "Trovão", year: "2019", url: "https://www.youtube.com/embed/qf3UuX3Chfg" },
   { title: "Bailarina", year: "2018", url: "https://www.youtube.com/embed/2NXQK2Pt2Pg" },
   { title: "Tu me Bugas", year: "2018", url: "https://www.youtube.com/embed/NDB4n5VVvzU" },
-  { title: "Da Sacada", year: "2018", url: "https://www.youtube.com/embed/UE2YtHhXxJ8" },
-  { title: "O jogo (part. Gio Oliveira)", year: "2016", url: "https://www.youtube.com/embed/pY_Ej92DiBY" },
-  { title: "Epílogo", year: "2016", url: "https://www.youtube.com/embed/cSSXomuWbsI" },
-  { title: "Falso Natural (part. Filipe Hudson)", year: "2016", url: "https://www.youtube.com/embed/6NTCBDlHSjI" },
-  { title: "Quando ela vem", year: "2016", url: "https://www.youtube.com/embed/aIZb_qoDtR4" },
-  { title: "Vogar", year: "2014", url: "https://www.youtube.com/embed/dewEo_aRrLc" },
 ];
 
 export default function MusicCarousel() {
