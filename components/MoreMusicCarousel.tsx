@@ -11,6 +11,7 @@ type Track = {
 };
 
 const moreMusic: Track[] = [
+  { title: "Hellena Almeida - Bete Balanço", year: "2025", url: "https://www.youtube.com/watch?v=XF41A7qCzS4" },
   { title: "Helleno & Os Universais - Redemoinho", year: "2025", url: "https://www.youtube.com/embed/okwOoaQo_Os" },
   { title: "Helleno & Os Universais - Belo Natural", year: "2025", url: "https://www.youtube.com/embed/UjHiJq_uboo" },
   { title: "Helleno & Os Universais - Os Olhos", year: "2024", url: "https://www.youtube.com/embed/LwMxoMqA1Hg" },
