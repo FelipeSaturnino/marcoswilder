@@ -52,15 +52,16 @@ export default function MoreMusicCarousel() {
         style={{
           position: "absolute",
           top: "50%",
-          left: "-40px",
+          left: "clamp(0.25rem, 1vw, 40px)",
           transform: "translateY(-50%)",
           zIndex: 2,
           background: "none",
           border: "none",
           cursor: "pointer",
+          padding: "0.5rem",
         }}
       >
-        <ArrowLeft size={40} color={isLeftHovered ? "#ccc" : "#fff"} />
+        <ArrowLeft size={Math.min(40, window.innerWidth * 0.05)} color={isLeftHovered ? "#ccc" : "#fff"} />
       </button>
 
       <button
@@ -71,15 +72,16 @@ export default function MoreMusicCarousel() {
         style={{
           position: "absolute",
           top: "50%",
-          right: "-40px",
+          right: "clamp(0.25rem, 1vw, 40px)",
           transform: "translateY(-50%)",
           zIndex: 2,
           background: "none",
           border: "none",
           cursor: "pointer",
+          padding: "0.5rem",
         }}
       >
-        <ArrowRight size={40} color={isRightHovered ? "#ccc" : "#fff"} />
+        <ArrowRight size={Math.min(40, window.innerWidth * 0.05)} color={isRightHovered ? "#ccc" : "#fff"} />
       </button>
 
       <div ref={sliderRef} className="keen-slider">
@@ -88,15 +90,16 @@ export default function MoreMusicCarousel() {
             <div
               style={{
                 backgroundColor: "white",
-                padding: "1.5rem",
+                padding: "clamp(1rem, 3vw, 1.5rem)",
                 boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
                 display: "flex",
                 flexDirection: "column",
                 gap: "0.75rem",
                 height: "100%",
+                borderRadius: "8px",
               }}
             >
-              <div style={{ display: "flex", justifyContent: "space-between", fontWeight: "bold", fontSize: "1.2rem" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", fontWeight: "bold", fontSize: "clamp(1rem, 2vw, 1.2rem)" }}>
                 <span>{track.title}</span>
                 <span>{track.year}</span>
               </div>

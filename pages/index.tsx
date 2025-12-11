@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Head from "next/head";
 import Footer from '@/components/Footer';
@@ -10,6 +10,9 @@ import GalleryCarousel from '@/components/GalleryCarousel';
 import Schedule from "@/components/Schedule";
 import Bio from "@/components/Bio";
 import Contact from "@/components/Contact";
+import dynamic from "next/dynamic";
+const MobileMenu = dynamic(() => import("../components/MobileMenu"), { ssr: false });
+
 import {
   inputStyle,
   buttonStyle,
@@ -19,6 +22,18 @@ import {
 
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const [section, setSection] = useState("home");
 
   const content = {
@@ -61,6 +76,7 @@ Fotos: (
       <Background />
 
       <SocialIcons />
+      <MobileMenu onSelect={(s) => setSection(s)} />
   <Head>
     <title>Marcos Wilder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -93,11 +109,14 @@ Fotos: (
   <h1
   style={{
     color: "white",
-    fontSize: section === "home" ? "5rem" : "3rem", // ⬅️ Aumenta só na home
+    fontSize: section === "home" 
+      ? "clamp(2rem, 8vw, 5rem)" 
+      : "clamp(1.5rem, 5vw, 3rem)",
     fontWeight: "bold",
     margin: 0,
     whiteSpace: "nowrap",
     fontFamily: "'Brown Sugar', cursive",
+    display: isMobile ? "none" : "block",
   }}
 >
   MARCOS WILDER
@@ -110,7 +129,7 @@ Fotos: (
 
 
 
-      <main style={{ padding: "4rem 1rem", textAlign: "center", zIndex: 3, position: "relative" }}>
+      <main style={{ padding: "clamp(4.5rem, 4vw, 4rem) 1rem clamp(2rem, 4vw, 4rem) 1rem", textAlign: "center", zIndex: 3, position: "relative" }}>
   <motion.div
   key={section}
   initial={{ opacity: 0 }}
@@ -126,10 +145,10 @@ Fotos: (
         : "transparent",
     maxWidth:
       section === "Bio" || section === "Contato" || section === "Agenda"
-        ? "800px"
-        : "1200px", // ⬅️ aplica limite só para Bio, Contato e Agenda
+        ? "min(100%, 800px)"
+        : "min(100%, 1200px)",
     margin: "0 auto",
-    padding: section !== "home" ? "1.5rem" : "0",
+    padding: section !== "home" ? "clamp(1rem, 3vw, 1.5rem)" : "0",
     borderRadius: "0",
     boxShadow:
       section !== "home" ? "0 4px 16px rgba(0, 0, 0, 0.1)" : "none",

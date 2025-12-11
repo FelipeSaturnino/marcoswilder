@@ -22,8 +22,8 @@ export default function Footer({ onSelect }: FooterProps) {
         width: "100%",
         display: "flex",
         justifyContent: "center",
-        gap: "2rem",
-        padding: "1rem 0",
+        gap: "clamp(1rem, 2vw, 2rem)",
+        padding: "clamp(0.75rem, 2vw, 1rem) 0",
         background: "transparent",
         zIndex: 5,
       }}
@@ -37,10 +37,10 @@ export default function Footer({ onSelect }: FooterProps) {
             border: "none",
             color: "white",
             fontWeight: "bold",
-            fontSize: "1rem",
+            fontSize: "clamp(0.75rem, 1.5vw, 1rem)",
             textTransform: "uppercase",
             cursor: "pointer",
-            padding: "0.5rem 0.8rem",
+            padding: "0.5rem clamp(0.5rem, 1vw, 0.8rem)",
             position: "relative",
           }}
         >
