@@ -43,48 +43,27 @@ export default function MoreMusicCarousel() {
   const [isRightHovered, setIsRightHovered] = useState(false);
 
   return (
-    <div style={{ position: "relative", minHeight: "80vh", display: "flex", alignItems: "center" }}>
+    <div style={{ position: "relative", minHeight: "80vh", display: "flex", alignItems: "center", justifyContent: "center", gap: "clamp(0.5rem, 2vw, 2rem)", padding: "0 clamp(0.5rem, 2vw, 2rem)" }}>
       <button
         onClick={() => instanceRef.current?.prev()}
         aria-label="Voltar"
         onMouseEnter={() => setIsLeftHovered(true)}
         onMouseLeave={() => setIsLeftHovered(false)}
         style={{
-          position: "absolute",
-          top: "50%",
-          left: "clamp(0.25rem, 1vw, 40px)",
-          transform: "translateY(-50%)",
-          zIndex: 2,
           background: "none",
           border: "none",
           cursor: "pointer",
           padding: "0.5rem",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexShrink: 0,
         }}
       >
         <ArrowLeft size={Math.min(40, window.innerWidth * 0.05)} color={isLeftHovered ? "#ccc" : "#fff"} />
       </button>
 
-      <button
-        onClick={() => instanceRef.current?.next()}
-        aria-label="Avançar"
-        onMouseEnter={() => setIsRightHovered(true)}
-        onMouseLeave={() => setIsRightHovered(false)}
-        style={{
-          position: "absolute",
-          top: "50%",
-          right: "clamp(0.25rem, 1vw, 40px)",
-          transform: "translateY(-50%)",
-          zIndex: 2,
-          background: "none",
-          border: "none",
-          cursor: "pointer",
-          padding: "0.5rem",
-        }}
-      >
-        <ArrowRight size={Math.min(40, window.innerWidth * 0.05)} color={isRightHovered ? "#ccc" : "#fff"} />
-      </button>
-
-      <div ref={sliderRef} className="keen-slider">
+      <div ref={sliderRef} className="keen-slider" style={{ flex: 1 }}>
         {moreMusic.map((track, index) => (
           <div key={index} className="keen-slider__slide">
             <div
@@ -116,6 +95,25 @@ export default function MoreMusicCarousel() {
           </div>
         ))}
       </div>
+
+      <button
+        onClick={() => instanceRef.current?.next()}
+        aria-label="Avançar"
+        onMouseEnter={() => setIsRightHovered(true)}
+        onMouseLeave={() => setIsRightHovered(false)}
+        style={{
+          background: "none",
+          border: "none",
+          cursor: "pointer",
+          padding: "0.5rem",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexShrink: 0,
+        }}
+      >
+        <ArrowRight size={Math.min(40, window.innerWidth * 0.05)} color={isRightHovered ? "#ccc" : "#fff"} />
+      </button>
     </div>
   );
 }
