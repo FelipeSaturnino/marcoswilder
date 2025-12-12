@@ -8,12 +8,12 @@ type Show = {
 };
 
 const shows: Show[] = [
-  /*{
-    date: "08/08/2025",
+  {
+    date: "19/12/2025",
     city: "São Paulo - SP",
-    venue: "Depois do Fim do Mundo Estúdio",
-    ticketLink: "https://www.instagram.com/depoisdofimdomundoestudio/",
-  },*/
+    venue: "Picles",
+    ticketLink: "https://www.instagram.com/p/DRVHjguAW1g/",
+  },
   // Para simular ausência de eventos, deixe o array vazio []
 ];
 
