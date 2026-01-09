@@ -106,7 +106,7 @@ const Schedule = () => {
                         fontWeight: "bold",
                       }}
                     >
-                      Informações
+                      Ingressos
                     </a>
                   </td>
                 </tr>
