@@ -11,6 +11,8 @@ type Track = {
 };
 
 const music: Track[] = [
+  { title: "Pressa", year: "2026", url: "https://www.youtube.com/embed/vrHZnkQXJOM" },
+  { title: "Da Sacada", year: "2026", url: "https://www.youtube.com/embed/t4meyFPy2ko" },
   { title: "Trânsito", year: "2023", url: "https://www.youtube.com/embed/-3uTvAE1umo" },
   { title: "Pop Filosofia", year: "2021", url: "https://www.youtube.com/embed/llHQkrJmeYw" },
   { title: "Sol", year: "2020", url: "https://www.youtube.com/embed/Y_uojyGgB_I" },

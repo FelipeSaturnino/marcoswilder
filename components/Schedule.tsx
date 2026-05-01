@@ -8,12 +8,12 @@ type Show = {
 };
 
 const shows: Show[] = [
-  {
+  /*{
     date: "23/01/2026",
     city: "São Paulo - SP",
     venue: "Casa Lab",
     ticketLink: "https://www.clubedoingresso.com/evento/jorgens-marcoswilder-casalab/",
-  },
+  },*/
   // Para simular ausência de eventos, deixe o array vazio []
 ];
 
