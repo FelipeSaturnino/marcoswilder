@@ -8,12 +8,12 @@ type Show = {
 };
 
 const shows: Show[] = [
-  /*{
-    date: "23/01/2026",
+  {
+    date: "21/08/2026",
     city: "São Paulo - SP",
-    venue: "Casa Lab",
-    ticketLink: "https://www.clubedoingresso.com/evento/jorgens-marcoswilder-casalab/",
-  },*/
+    venue: "Whiplash Bar",
+    ticketLink: "https://www.sympla.com.br/evento/whiplash-apresenta-marcos-wilder/3537051",
+  },
   // Para simular ausência de eventos, deixe o array vazio []
 ];
 
