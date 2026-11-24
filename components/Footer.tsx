@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Link from "next/link";
 
 type FooterProps = {
   onSelect: (section: string) => void;
@@ -57,12 +56,7 @@ export default function Footer({ onSelect, activeItem }: FooterProps) {
           />
         );
 
-        return item === "Apoie" ? (
-          <Link key={item} href="/apoie" style={itemStyle}>
-            {item}
-            {marker}
-          </Link>
-        ) : (
+        return (
           <button key={item} onClick={() => handleClick(item)} style={itemStyle}>
             {item}
             {marker}

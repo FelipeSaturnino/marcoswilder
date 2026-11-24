@@ -1,33 +1,12 @@
-.brand {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 2;
-  color: white;
-  font-family: "Brown Sugar", cursive;
-  font-size: clamp(1.5rem, 5vw, 3rem);
-  white-space: nowrap;
-}
-
-.page {
-  min-height: 100vh;
-  padding: clamp(6rem, 12vh, 8rem) 1rem 7rem;
-  position: relative;
-  z-index: 1;
-}
-
 .content {
   width: 100%;
-  max-width: 800px;
+  max-width: 680px;
   margin: 0 auto;
-  padding: clamp(1.5rem, 5vw, 3rem);
-  background: white;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   color: #222;
   text-align: center;
 }
 
-.content h1 {
+.title {
   margin: 0;
   font-family: "Brown Sugar", cursive;
   font-size: clamp(2rem, 5vw, 3rem);
@@ -41,10 +20,10 @@
 }
 
 .section {
-  margin-top: clamp(2rem, 6vw, 3.5rem);
+  margin-top: clamp(1.75rem, 5vw, 2.5rem);
 }
 
-.section h2 {
+.section h3 {
   margin: 0;
   font-size: clamp(1.25rem, 3vw, 1.5rem);
 }
@@ -122,23 +101,11 @@
 }
 
 .thanks {
-  margin: clamp(2rem, 6vw, 3.5rem) 0 0;
+  margin: clamp(1.75rem, 5vw, 2.5rem) 0 0;
   font-weight: 700;
 }
 
 @media (max-width: 767px) {
-  .brand {
-    display: none;
-  }
-
-  .page {
-    padding: 5.5rem 1rem 2rem;
-  }
-
-  .content {
-    padding: 1.5rem 1.25rem 2rem;
-  }
-
   .bankDetails div {
     grid-template-columns: 1fr;
     gap: 0.25rem;

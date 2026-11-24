@@ -4,7 +4,6 @@ import { useState } from "react";
 import styles from "./MobileMenu.module.css";
 import { Menu, X } from "lucide-react";
 import { FaInstagram, FaSpotify, FaYoutube, FaApple, FaDeezer, FaAmazon } from "react-icons/fa";
-import Link from "next/link";
 
 interface Props {
   onSelect: (section: string) => void;
@@ -39,14 +38,11 @@ export default function MobileMenu({ onSelect }: Props) {
               <div className={styles.logoMenu}>MARCOS WILDER</div>
 
               <nav className={styles.navItems}>
-                {["Música", "Mais música", "Agenda", "Fotos", "Bio", "Contato"].map((item) => (
+                {["Música", "Mais música", "Agenda", "Fotos", "Bio", "Contato", "Apoie"].map((item) => (
                   <button key={item} onClick={() => handleSelect(item)}>
                     {item}
                   </button>
                 ))}
-                <Link href="/apoie" onClick={() => setOpen(false)}>
-                  Apoie
-                </Link>
               </nav>
 
               <div className={styles.social}>
