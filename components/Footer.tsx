@@ -1,13 +1,15 @@
 import { useState } from 'react';
+import Link from "next/link";
 
 type FooterProps = {
   onSelect: (section: string) => void;
+  activeItem?: string;
 };
 
-const menuItems = ["Música", "Mais música", "Agenda", "Fotos", "Bio", "Contato"];
+const menuItems = ["Música", "Mais música", "Agenda", "Fotos", "Bio", "Contato", "Apoie"];
 
-export default function Footer({ onSelect }: FooterProps) {
-  const [active, setActive] = useState("MÚSICA");
+export default function Footer({ onSelect, activeItem }: FooterProps) {
+  const [active, setActive] = useState(activeItem ?? "MÚSICA");
 
   const handleClick = (item: string) => {
     setActive(item);
@@ -28,26 +30,22 @@ export default function Footer({ onSelect }: FooterProps) {
         zIndex: 5,
       }}
     >
-      {menuItems.map((item) => (
-        <button
-          key={item}
-          onClick={() => handleClick(item)}
-          style={{
-            background: "none",
-            border: "none",
-            color: "white",
-            fontWeight: "bold",
-            fontSize: "clamp(0.75rem, 1.5vw, 1rem)",
-            textTransform: "uppercase",
-            cursor: "pointer",
-            padding: "0.5rem clamp(0.5rem, 1vw, 0.8rem)",
-            position: "relative",
-          }}
-        >
-          {item}
+      {menuItems.map((item) => {
+        const itemStyle = {
+          background: "none",
+          border: "none",
+          color: "white",
+          fontWeight: "bold",
+          fontSize: "clamp(0.75rem, 1.5vw, 1rem)",
+          textTransform: "uppercase" as const,
+          cursor: "pointer",
+          padding: "0.5rem clamp(0.5rem, 1vw, 0.8rem)",
+          position: "relative" as const,
+          textDecoration: "none",
+        };
+        const marker = (
           <span
             style={{
-              content: '""',
               position: "absolute",
               top: 0,
               left: 0,
@@ -57,13 +55,25 @@ export default function Footer({ onSelect }: FooterProps) {
               transition: "background-color 0.2s",
             }}
           />
-          <style jsx>{`
-            button:hover span {
-              background-color: white !important;
-            }
-          `}</style>
-        </button>
-      ))}
+        );
+
+        return item === "Apoie" ? (
+          <Link key={item} href="/apoie" style={itemStyle}>
+            {item}
+            {marker}
+          </Link>
+        ) : (
+          <button key={item} onClick={() => handleClick(item)} style={itemStyle}>
+            {item}
+            {marker}
+            <style jsx>{`
+              button:hover span {
+                background-color: white !important;
+              }
+            `}</style>
+          </button>
+        );
+      })}
     </footer>
   );
 }

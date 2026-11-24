@@ -4,6 +4,7 @@ import { useState } from "react";
 import styles from "./MobileMenu.module.css";
 import { Menu, X } from "lucide-react";
 import { FaInstagram, FaSpotify, FaYoutube, FaApple, FaDeezer, FaAmazon } from "react-icons/fa";
+import Link from "next/link";
 
 interface Props {
   onSelect: (section: string) => void;
@@ -43,6 +44,9 @@ export default function MobileMenu({ onSelect }: Props) {
                     {item}
                   </button>
                 ))}
+                <Link href="/apoie" onClick={() => setOpen(false)}>
+                  Apoie
+                </Link>
               </nav>
 
               <div className={styles.social}>

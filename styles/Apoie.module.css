@@ -1,0 +1,146 @@
+.brand {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  color: white;
+  font-family: "Brown Sugar", cursive;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  white-space: nowrap;
+}
+
+.page {
+  min-height: 100vh;
+  padding: clamp(6rem, 12vh, 8rem) 1rem 7rem;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  background: white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  color: #222;
+  text-align: center;
+}
+
+.content h1 {
+  margin: 0;
+  font-family: "Brown Sugar", cursive;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 400;
+}
+
+.description {
+  max-width: 620px;
+  margin: 1rem auto 0;
+  line-height: 1.7;
+}
+
+.section {
+  margin-top: clamp(2rem, 6vw, 3.5rem);
+}
+
+.section h2 {
+  margin: 0;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+}
+
+.instruction {
+  margin: 0.75rem auto 1.25rem;
+  line-height: 1.6;
+}
+
+.qrCode {
+  display: block;
+  width: min(100%, 300px);
+  height: auto;
+  margin: 0 auto;
+}
+
+.pixKey {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.25rem auto 0;
+}
+
+.pixKey code {
+  max-width: 100%;
+  color: #222;
+  overflow-wrap: anywhere;
+}
+
+.pixKey button {
+  padding: 0.7rem 1rem;
+  border: 0;
+  background: #222;
+  color: white;
+  font: inherit;
+}
+
+.pixKey button:hover {
+  background: #444;
+}
+
+.pixKey button:focus-visible {
+  outline: 2px solid #222;
+  outline-offset: 3px;
+}
+
+.copyStatus {
+  min-height: 1.5em;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.bankDetails {
+  max-width: 520px;
+  margin: 1.25rem auto 0;
+  text-align: left;
+}
+
+.bankDetails div {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.8fr) 1.2fr;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.bankDetails dt {
+  font-weight: 700;
+}
+
+.bankDetails dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.thanks {
+  margin: clamp(2rem, 6vw, 3.5rem) 0 0;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .brand {
+    display: none;
+  }
+
+  .page {
+    padding: 5.5rem 1rem 2rem;
+  }
+
+  .content {
+    padding: 1.5rem 1.25rem 2rem;
+  }
+
+  .bankDetails div {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}

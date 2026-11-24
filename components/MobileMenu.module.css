@@ -131,7 +131,8 @@
   margin: clamp(2rem, 5vw, 3rem) 0;
 }
 
-.navItems button {
+.navItems button,
+.navItems a {
   font-size: clamp(1.3rem, 2.5vw, 1.2rem);
   background: none;
   border: none;
@@ -140,13 +141,15 @@
   text-align: left;
   font-weight: 600;
   padding: 0.5rem 0;
+  text-decoration: none;
   transition: color 0.3s ease;
   /* use the system/sans-serif stack for nav items for readability */
   font-family: "Century Gothic", "BlinkMacSystemFont", sans-serif;
   text-transform: uppercase;
 }
 
-.navItems button:hover {
+.navItems button:hover,
+.navItems a:hover {
   color: #666;
 }
 

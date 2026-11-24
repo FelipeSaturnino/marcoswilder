@@ -5,33 +5,13 @@ export default function Bio() {
   return (
     <div className={styles.bioContainer}>
       <p>
-        Marcos Wilder é cantor, compositor, arranjador, instrumentista, sonoplasta e produtor musical natural de São Paulo.
-        Quando criança, teve contato com a música através do contrabaixo e violão, mas só a partir de 2014, com o projeto
-        autoral que leva seu nome, passou a publicar suas músicas nas redes sociais e a se apresentar em bares, saraus,
-        nas ruas e espaços culturais.
-      </p>
+Marcos Wilder é cantor, compositor e pianista criado na região da Brasilândia na cidade de São Paulo. Vem pesquisando sua identidade sonora desde 2014, se forma em Direção de Som e se aventura em  vários  trabalhos musicais.      </p>
 
       <p>
-        Além dos singles, lança dois EPs: <strong>Molhado</strong> (2020) e <strong>Prolixo</strong> (2022). Também faz participação
-        vocal na faixa <em>João</em>, do álbum <strong>Seg/Sex</strong> (2022), da banda <em>Jorgens</em>. No mesmo ano, assume o papel
-        de produtor no álbum <strong>Especialista numa nota só</strong>, de <em>Luiza Akimoto</em>.
+Além dos singles, lança dois EPs, sendo eles <strong>Molhado</strong> (2020) e <strong>Prolixo</strong> (2022) que foi produzido por <em>Marcelo Ariente Makoy</em>. Faz participação vocal na faixa João do álbum <strong>Seg/Sex</strong> (2022) da banda <em>Jorgens</em> e no mesmo ano é de diretor musical e instrumentista do álbum <strong>Especialista numa nota só</strong> de <em>Luiza Akimoto</em> gravado por <em>Caio Alarcon</em> e <em>Guilherme Kastrup</em>. Em 2023 lança o EP instrumental <strong>Jamô Vol.1</strong> com a banda <em>Jammô</em>. Em 2024, com a banda <em>Helleno e os Universais</em> lança o EP <strong>Novos tempos</strong> e logo depois o álbum <strong>Universal Fraturado</strong>(2025) produzido por <em>Rafa Barone</em>. 
       </p>
-
       <p>
-        Em 2024, lança o EP <strong>Novos tempos</strong>, com a banda <em>Helleno e os Universais</em>. No mesmo ano, inicia o
-        espetáculo <strong>A volta do sangue latino</strong>, uma homenagem aos 50 anos do grupo <em>Secos e Molhados</em>. Ainda
-        em 2024, se apresenta no <em>Centro Cultural de São Paulo (CCSP)</em>.
-      </p>
-
-      <p>
-        Já em 2025, participa do show na exposição de <em>Ney Matogrosso</em>, no <em>Museu da Imagem e do Som (MIS)</em>, e também da estreia
-        do filme <em>Homem com H</em>, de <em>Esmir Filho</em>, produzido pela <em>Paris Entertainment</em>, com <em>Helleno e os Universais</em>.
-      </p>
-
-      <p>
-        Atualmente, é tecladista do músico <em>Gil Santanna</em>, integrante das bandas <em>Helleno e os Universais</em> e <em>Jammô</em>,
-        que acompanha artistas como <em>Adriano Nascimento</em>, <em>Ester Reis</em>, <em>Zoioo Mc</em>, <em>Tay Oluá</em> e <em>Luiza Akimoto</em>.
-      </p>
+Nessas vivências, acompanhou a cantora <em>Naluz</em>, deixa um pouco da sua alma na frequência do reggae com <em>Gil Santanna</em>, no swing do soul com <em>Ester Reis</em>, nas brasilidades com <em>Adriano Nascimento</em>, no R&B com <em>Tay Oluá</em> e faz parte dos arranjos e novas produções da banda de cumbia <em>Bazuros</em>.</p>
     </div>
   );
 }

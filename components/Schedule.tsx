@@ -9,10 +9,10 @@ type Show = {
 
 const shows: Show[] = [
   {
-    date: "21/08/2026",
+    date: "06/12/2026",
     city: "São Paulo - SP",
-    venue: "Whiplash Bar",
-    ticketLink: "https://www.sympla.com.br/evento/whiplash-apresenta-marcos-wilder/3537051",
+    venue: "Studio Karo",
+    ticketLink: "https://docs.google.com/forms/d/e/1FAIpQLSd5AgZDelskb6AOhv_DNf0HgVxU0FAsJE2EDAzaSPax8URZ7Q/viewform",
   },
   // Para simular ausência de eventos, deixe o array vazio []
 ];
